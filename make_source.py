@@ -9,13 +9,13 @@ torch.multiprocessing.set_sharing_strategy('file_system')
 torch.backends.cudnn.benchmark = True
 torch.cuda.set_device(0)
 
-save_dir = Path('./data/source/')
+save_dir = Path('/OpenPose_Pose_transfer/data/source/')
 save_dir.mkdir(exist_ok=True)
 
 img_dir = save_dir.joinpath('images')
 img_dir.mkdir(exist_ok=True)
 
-if len(os.listdir('./data/source/images'))<100:
+if len(os.listdir('/OpenPose_Pose_transfer/data/source/images'))<100:
     cap = cv2.VideoCapture(str(save_dir.joinpath('mv.mp4')))
     i = 0
     while (cap.isOpened()):
@@ -33,7 +33,7 @@ import matplotlib.pyplot as plt
 import torch
 from tqdm import tqdm
 
-openpose_dir = Path('./src/PoseEstimation/')
+openpose_dir = Path('/OpenPose_Pose_transfer/src/PoseEstimation/')
 
 import sys
 sys.path.append(str(openpose_dir))
