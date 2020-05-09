@@ -8,7 +8,7 @@ from scipy import ndimage
 import sys
 sys.path.append('./PoseEstimation')
 
-from network.post import *
+from src.PoseEstimation.network.post import *
 
 def remove_noise(img):
     th = filters.threshold_otsu(img)
