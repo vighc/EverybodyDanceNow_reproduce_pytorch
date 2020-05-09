@@ -4,8 +4,8 @@ import numpy as np
 import os
 import ntpath
 import time
-from src.pix2pixHD.util import util
-from src.pix2pixHD.util import html
+from pix2pixHD.util import util
+from pix2pixHD.util import html
 import scipy.misc
 try:
     from StringIO import StringIO  # Python 2.7
