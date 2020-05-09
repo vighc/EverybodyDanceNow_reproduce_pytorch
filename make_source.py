@@ -48,7 +48,7 @@ from network.rtpose_vgg import get_model
 from openpose_utils import remove_noise, get_pose
 
 
-weight_name = './src/PoseEstimation/network/weight/pose_model.pth'
+weight_name = '/EverybodyDanceNow_reproduce_pytorch/src/PoseEstimation/network/weight/pose_model.pth'
 
 model = get_model('vgg19')
 model.load_state_dict(torch.load(weight_name))
