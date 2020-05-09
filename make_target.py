@@ -32,13 +32,13 @@ if len(os.listdir('/OpenPose_Pose_transfer/data/target/images'))<100:
 
 import sys
 sys.path.append(str(openpose_dir))
-sys.path.append('./src/utils')
+sys.path.append('/OpenPose_Pose_transfer/src/utils')
 # openpose
-from network.rtpose_vgg import get_model
-from evaluate.coco_eval import get_multiplier, get_outputs
+from src.PoseEstimation.network.rtpose_vgg import get_model
+from src.PoseEstimation.evaluate.coco_eval import get_multiplier, get_outputs
 
 # utils
-from openpose_utils import remove_noise, get_pose
+from src.utils.openpose_utils import remove_noise, get_pose
 
 weight_name = '/OpenPose_Pose_transfer/src/PoseEstimation/network/weight/pose_model.pth'
 print('load model...')
