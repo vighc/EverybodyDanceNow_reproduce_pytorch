@@ -7,22 +7,22 @@ import cv2
 from pathlib import Path
 
 # for idx in range(200,400):
-#     img = cv2.imread('./data/source/test_label_ori/label_{}.png'.format(idx))
-#     cv2.imwrite('./data/source/test_label_ori/{:05d}.png'.format(idx), img)
+#     img = cv2.imread('/OpenPose_Pose_transfer/data/source/test_label_ori/label_{}.png'.format(idx))
+#     cv2.imwrite('/OpenPose_Pose_transfer/data/source/test_label_ori/{:05d}.png'.format(idx), img)
 
 
-target_img = cv2.imread('./data/target/train/train_label/00001.png')[:,:,0]
-target_img_rgb = cv2.imread('./data/target/train/train_img/00001.png')
-source_img = cv2.imread('./data/target/train/train_label/00001.png')[:,:,0]
-source_img_rgb = cv2.imread('./data/target/train/train_img/00001.png')
+target_img = cv2.imread('/OpenPose_Pose_transfer/data/target/train/train_label/00001.png')[:,:,0]
+target_img_rgb = cv2.imread('/OpenPose_Pose_transfer/data/target/train/train_img/00001.png')
+source_img = cv2.imread('/OpenPose_Pose_transfer/data/target/train/train_label/00001.png')[:,:,0]
+source_img_rgb = cv2.imread('/OpenPose_Pose_transfer/data/target/train/train_img/00001.png')
 
-path = './data/source/test_label_ori/'
-save_dir = Path('./data/source/')
+path = 'OpenPose_Pose_transfer/data/source/test_label_ori/'
+save_dir = Path('/OpenPose_Pose_transfer/data/source/')
 output = save_dir.joinpath('test_label')
 output.mkdir(exist_ok=True)
 head_dir = save_dir.joinpath('test_head')
 head_dir.mkdir(exist_ok=True)
-pose_dir = Path('./data/source/pose_source.npy')
+pose_dir = Path('/OpenPose_Pose_transfer/data/source/pose_source.npy')
 pose_cord = np.load(str(pose_dir))
 
 plt.subplot(222)
