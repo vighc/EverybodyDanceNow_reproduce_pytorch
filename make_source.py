@@ -37,7 +37,7 @@ openpose_dir = Path('/OpenPose_Pose_transfer/src/PoseEstimation/')
 
 import sys
 sys.path.append(str(openpose_dir))
-sys.path.append('./src/utils')
+sys.path.append('/OpenPose_Pose_transfer/src/utils')
 
 
 # openpose
