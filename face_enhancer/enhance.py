@@ -41,10 +41,10 @@ def torch2numpy(tensor):
     
 if __name__ == '__main__':
     torch.backends.cudnn.benchmark = True
-    dataset_dir = '../data/face'   # save test_sync in this folder
-    pose_name = '../data/source/pose_source_norm.npy' # coordinate save every heads
-    ckpt_dir = '../checkpoints/face'
-    result_dir = './results'
+    dataset_dir = '/OpenPose_Pose_transfer/data/face'   # save test_sync in this folder
+    pose_name = '/OpenPose_Pose_transfer/data/source/pose_source_norm.npy' # coordinate save every heads
+    ckpt_dir = '/OpenPose_Pose_transfer/checkpoints/face'
+    result_dir = '/OpenPose_Pose_transfer/results'
     save_dir = dataset_dir+'/full_fake/'
 
     if not os.path.exists(save_dir):
