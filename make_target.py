@@ -9,16 +9,16 @@ import warnings
 warnings.filterwarnings('ignore')
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
 
-openpose_dir = Path('./src/PoseEstimation/')
+openpose_dir = Path('/OpenPose_Pose_transfer/src/PoseEstimation/')
 
 
-save_dir = Path('./data/target/')
+save_dir = Path('/OpenPose_Pose_transfer/data/target/')
 save_dir.mkdir(exist_ok=True)
 
 img_dir = save_dir.joinpath('images')
 img_dir.mkdir(exist_ok=True)
 
-if len(os.listdir('./data/target/images'))<100:
+if len(os.listdir('/OpenPose_Pose_transfer/data/target/images'))<100:
     cap = cv2.VideoCapture(str(save_dir.joinpath('mv.mp4')))
     i = 0
     while (cap.isOpened()):
@@ -49,7 +49,7 @@ model.float()
 model.eval()
 pass
 
-save_dir = Path('./data/target/')
+save_dir = Path('/OpenPose_Pose_transfer/data/target/')
 save_dir.mkdir(exist_ok=True)
 
 img_dir = save_dir.joinpath('images')
