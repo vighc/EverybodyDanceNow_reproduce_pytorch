@@ -40,7 +40,7 @@ from evaluate.coco_eval import get_multiplier, get_outputs
 # utils
 from openpose_utils import remove_noise, get_pose
 
-weight_name = './src/PoseEstimation/network/weight/pose_model.pth'
+weight_name = '/OpenPose_Pose_transfer/src/PoseEstimation/network/weight/pose_model.pth'
 print('load model...')
 model = get_model('vgg19')
 model.load_state_dict(torch.load(weight_name))
