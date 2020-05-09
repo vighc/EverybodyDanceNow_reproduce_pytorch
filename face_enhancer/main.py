@@ -41,10 +41,10 @@ def main(is_debug):
     # configs
     import os
 
-    dataset_dir = '../data/face'
-    pose_name = '../data/target/pose.npy'
-    ckpt_dir = '../checkpoints/face'
-    log_dir = '../checkpoints/face/logs'
+    dataset_dir = '/OpenPose_Pose_transfer/data/face'
+    pose_name = '/OpenPose_Pose_transfer/data/target/pose.npy'
+    ckpt_dir = '/OpenPose_Pose_transfer/checkpoints/face'
+    log_dir = '/OpenPose_Pose_transfer/checkpoints/face/logs'
     batch_num = 10
     batch_size = 10
 
