@@ -3,19 +3,19 @@ from pathlib import Path
 import cv2
 from tqdm import tqdm
 
-face_sync_dir = Path('../data/face/ ')
+face_sync_dir = Path('/OpenPose_Pose_transfer/data/face/ ')
 face_sync_dir.mkdir(exist_ok=True)
-test_sync_dir = Path('../data/face/test_sync/ ')
+test_sync_dir = Path('/OpenPose_Pose_transfer/data/face/test_sync/ ')
 test_sync_dir.mkdir(exist_ok=True)
-test_real_dir = Path('../data/face/test_real/ ')
+test_real_dir = Path('/OpenPose_Pose_transfer/data/face/test_real/ ')
 test_real_dir.mkdir(exist_ok=True)
-test_img = Path('../data/target/test_img/ ')
+test_img = Path('/OpenPose_Pose_transfer/data/target/test_img/ ')
 test_img.mkdir(exist_ok=True)
-test_label = Path('../data/target/test_label/ ')
+test_label = Path('/OpenPose_Pose_transfer/data/target/test_label/ ')
 test_label.mkdir(exist_ok=True)
 
-train_dir = '../data/target/train/train_img/'
-label_dir = '../data/target/train/train_label/'
+train_dir = '/OpenPose_Pose_transfer/data/target/train/train_img/'
+label_dir = '/OpenPose_Pose_transfer/data/target/train/train_label/'
 
 print('Prepare test_real....')
 for img_idx in tqdm(range(len(os.listdir(train_dir)))):
@@ -32,21 +32,21 @@ from collections import OrderedDict
 from pathlib import Path
 from tqdm import tqdm
 import sys
-pix2pixhd_dir = Path('../src/pix2pixHD/')
+pix2pixhd_dir = Path('/OpenPose_Pose_transfer/src/pix2pixHD/')
 sys.path.append(str(pix2pixhd_dir))
 
-from data.data_loader import CreateDataLoader
-from models.models import create_model
-import util.util as util
-from util.visualizer import Visualizer
-from util import html
+from src.pix2pixHD.data.data_loader import CreateDataLoader
+from src.pix2pixHD.models.models import create_model
+import src.pix2pixHD.util.util as util
+from src.pix2pixHD.util.visualizer import Visualizer
+from src.pix2pixHD.util import html
 import src.config.test_opt as opt
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
-opt.checkpoints_dir = '../checkpoints/'
-opt.dataroot='../data/target/'
+opt.checkpoints_dir = '/OpenPose_Pose_transfer/checkpoints/'
+opt.dataroot='/OpenPose_Pose_transfer/data/target/'
 opt.name='target'
 opt.nThreads=0
-opt.results_dir='./prepare/'
+opt.results_dir='/face_enhancer/prepare/'
 
 iter_path = os.path.join(opt.checkpoints_dir, opt.name, 'iter.txt')
 
