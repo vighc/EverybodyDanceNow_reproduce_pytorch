@@ -6,7 +6,7 @@ import torchvision.transforms as transforms
 import numpy as np
 import random
 
-class BaseDataset(data.Dataset):
+class BaseDataset(src.pix2pixHD.data.Dataset):
     def __init__(self):
         super(BaseDataset, self).__init__()
 
