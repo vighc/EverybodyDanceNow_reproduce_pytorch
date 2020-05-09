@@ -14,10 +14,10 @@ pix2pixhd_dir = Path(mainpath+'/src/pix2pixHD/')
 sys.path.append(str(pix2pixhd_dir))
 
 
-from data.data_loader import CreateDataLoader
-from models.models import create_model
-import util.util as util
-from util.visualizer import Visualizer
+from src.pix2pixHD.data.data_loader import CreateDataLoader
+from src.pix2pixHD.models.models import create_model
+import src.pix2pixHD.util.util as util
+from src.pix2pixHD.util.visualizer import Visualizer
 import src.config.train_opt as opt
 
 os.environ['CUDA_VISIBLE_DEVICES'] = "0"
