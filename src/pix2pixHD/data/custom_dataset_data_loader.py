@@ -1,5 +1,5 @@
 import torch.utils.data
-from data.base_data_loader import BaseDataLoader
+from src.pix2pixHD.data.base_data_loader import BaseDataLoader
 
 
 def CreateDataset(opt):
