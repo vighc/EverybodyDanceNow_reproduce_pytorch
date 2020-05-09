@@ -9,11 +9,11 @@ from pycocotools.coco import COCO
 from pycocotools.cocoeval import COCOeval
 
 import torch
-from training.datasets.coco_data.preprocessing import (inception_preprocess,
+from src.PoseEstimation.training.datasets.coco_data.preprocessing import (inception_preprocess,
                                               rtpose_preprocess,
                                               ssd_preprocess, vgg_preprocess)
-from network.post import decode_pose
-from network import im_transform
+from src.PoseEstimation.network.post import decode_pose
+from src.PoseEstimation.network import im_transform
 
 '''
 MS COCO annotation order:
