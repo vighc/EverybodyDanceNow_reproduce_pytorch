@@ -39,13 +39,13 @@ import sys
 sys.path.append(str(openpose_dir))
 sys.path.append('/OpenPose_Pose_transfer/src/utils')
 
-
+%cd /OpenPose_Pose_transfer/src/PoseEstimation/
 # openpose
 #from network.rtpose_vgg import gopenpose_diret_model
-from src.PoseEstimation.evaluate.coco_eval import get_multiplier, get_outputs
-from src.PoseEstimation.network.rtpose_vgg import get_model
-# utils
-from src.utils.openpose_utils import remove_noise, get_pose
+from evaluate.coco_eval import get_multiplier, get_outputs
+from network.rtpose_vgg import get_model
+%cd OpenPose_Pose_transfer/src/PoseEstimation/utils/
+from openpose_utils import remove_noise, get_pose
 
 
 weight_name = '/OpenPose_Pose_transfer/src/PoseEstimation/network/weight/pose_model.pth'
