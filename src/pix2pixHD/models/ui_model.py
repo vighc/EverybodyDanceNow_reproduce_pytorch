@@ -7,7 +7,7 @@ import numpy as np
 import os
 from PIL import Image
 import pix2pixHD.util.util as util
-from base_model import BaseModel
+from .base_model import BaseModel
 from . import networks
 
 class UIModel(BaseModel):
