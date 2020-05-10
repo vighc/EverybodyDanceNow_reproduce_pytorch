@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import os
 from torch.autograd import Variable
-from pix2pixHD.util.image_pool import ImagePool
+from util.image_pool import ImagePool
 from .base_model import BaseModel
 from . import networks
 
