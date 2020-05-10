@@ -8,7 +8,7 @@ from pathlib import Path
 
 # for idx in range(200,400):
 #     img = cv2.imread('/data/source/test_label_ori/label_{}.png'.format(idx))
-#     cv2.imwrite('//data/source/test_label_ori/{:05d}.png'.format(idx), img)
+#     cv2.imwrite('/data/source/test_label_ori/{:05d}.png'.format(idx), img)
 
 
 target_img = cv2.imread('/data/target/train/train_label/00001.png')[:,:,0]
